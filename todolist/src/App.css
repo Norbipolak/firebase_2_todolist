@@ -1,0 +1,95 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1080px;
+    margin: auto;
+    padding: 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0,
+    /*
+    Hogy ezek az elemek alul-felül eltávolodjanak 10px-vel 
+    */
+}
+
+.center-input {
+    display: block;
+    margin: 10px auto;
+    padding: 8px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.w-350 {
+    width: 350px;
+}
+
+.todo-list {
+    max-width: 500px;
+    margin: 15px auto;
+}
+
+.todo-list li {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    /*
+    Azért kell a display: flex meg a justify-content: space-between, mert itt lesz egy felírat 
+    hogy mi maga a teendő (az ugye a todoName) és lesz egy button és azt szeretnénk, hogy ez egyik az egyik oldalon 
+    a másik meg a másik oldalon legyen, ezért kell a space-between!!!!!
+    */
+    align-items: center; 
+    /*
+    hogy még vertikálisan is középen legyen 
+    */
+    padding: 5px;
+    margin-bottom: 10px;
+    /*
+    hogy el legyenek ezek az li-k, tehát a teendők egymástól választva 
+    */
+    border-radius: 5px;
+}
+/*
+és ezeket a li-ket, majd fontosság szerint fogjuk szinezni, ezért erre csinálunk 3 class-t, mert ugye 3 importance van
+*/
+.less-important {
+    background-color: #efefef;
+    border: 1px solid #d8d8d8;
+}
+.more-important {
+    background-color: #ffaa00;
+    border: 1px solid #e19600;
+}
+.highly-important {
+    background-color: #ff6a00;
+    border: 1px solid #da5b00;
+}
+
+.error-messages {
+    max-width: 500px;
+    margin: 15px auto;
+    background-color: #efefef;
+    border: 1px solid #d8d8d8;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.error-message {
+    background-color: #e1300d;
+    border: 1px solid #c32a0c;
+    border-radius: 5px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+/* padding: 15px; */ /*nem adunk neki padding-et, mert így a height - line-height 40px nem fogja majd középre berakni a szöveget vertikálisan*/
+    margin-bottom: 10px;
+}
+
